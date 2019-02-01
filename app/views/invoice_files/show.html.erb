@@ -1,0 +1,26 @@
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Invoive Numbers</th>
+				<th>Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @invoice_numbers.each do |number| %>
+				<tr>
+					<td><%= number.data %></td>
+					<td><%= number.number_type %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<div class="row">
+		<div class="col-md-6">
+			<%= link_to "Back", invoice_files_path %>
+		</div>
+		<div class="col-md-6 pull-right">
+			<%= paginate @invoice_numbers %>
+		</div>
+	</div>
+</div>

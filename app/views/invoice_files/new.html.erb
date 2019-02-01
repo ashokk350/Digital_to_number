@@ -1,0 +1,17 @@
+<div class="container">
+	<%= form_for @invoice_file do |f| %>
+		<div class="card" style="width: 18rem;">
+		  <div class="card-header">
+		    <h2>Upload File</h2>
+		  </div><br>
+		  <div class="">
+				<div class="row">
+			  	<%= f.file_field :name, class: 'form-control col-md-4' %>
+				</div><br>
+				<div class="row">
+			  	<%= f.submit class: 'form-control' %>
+				</div>
+		  </div>
+		 </div>
+  <% end %>
+</div>

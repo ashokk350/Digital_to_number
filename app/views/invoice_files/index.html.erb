@@ -1,0 +1,23 @@
+<div class="container">
+	<div>
+		<%= link_to 'Upload File', new_invoice_file_path %>
+	</div><br>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>File Name</th>
+					<th>Result</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @invoice_files.each do |file| %>
+					<tr>
+						<td><%= file.name %></td>
+						<td><%= link_to 'Show Result', invoice_file_path(file.id) %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
